@@ -1,10 +1,12 @@
 class BankAccount:
     bankName = "Citizens Bank"
 
-    def __init__(self, name, balance, minBalance):
+    def __init__(self, name, balance, minBalance, accountNum, routingNum):
         self.customer_name = name
         self.current_balance = balance
         self.minimum_balance = minBalance
+        self.__account_number = accountNum
+        self.__routing_number = routingNum
 
 
     def deposit(self, amount):
@@ -27,13 +29,3 @@ class BankAccount:
 
     def __str__(self):
         return (f"{self.bankName} user | Name: {self.customer_name} | Balance: ${self.current_balance}/${self.minimum_balance}")
-
-dude1 = BankAccount("John Doe", 2000, 100)
-dude2 = BankAccount("Friend Guy",1000000000,5)
-
-print(dude1.print_customer_information())
-dude1.withdraw(2000)
-dude1.withdraw(100)
-print(dude1.print_customer_information())
-
-print(dude1)
