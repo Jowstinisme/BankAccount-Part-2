@@ -11,3 +11,10 @@ class checkingAccount(BankAccount):
             return -1
         else:
             return super().withdraw(amount)
+
+    def transfer(self, amount, otherAccount):
+        if self.withdraw(amount) != -1:
+            # otherAccount should be another bank account function
+            otherAccount.deposit(amount)
+        else:
+            print("Transfer failed, amount is larger than transfer limit.")
