@@ -7,7 +7,7 @@ class checkingAccount(BankAccount):
 
     def withdraw(self, amount):
         if amount > self.transferLimit:
-            print(f"Withdraw failed, unable to withdraw more than {self.transferLimit}.")
+            print(f"Withdraw of ${amount} failed, unable to withdraw more than ${self.transferLimit}.")
             return -1
         else:
             return super().withdraw(amount)
@@ -17,4 +17,4 @@ class checkingAccount(BankAccount):
             # otherAccount should be another bank account function
             otherAccount.deposit(amount)
         else:
-            print("Transfer failed, amount is larger than transfer limit.")
+            print(f"Transfer failed, ${amount} is larger than transfer limit of ${self.transferLimit}.")

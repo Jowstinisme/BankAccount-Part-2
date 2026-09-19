@@ -19,6 +19,7 @@ class BankAccount:
             return -1
         else:
             self.current_balance = toBeWithdrawn
+            print(f"""-----------------\nWithdraw of ${amount} succeeded\n-----------------\n""")
             return 1
 
     def print_customer_information(self):
